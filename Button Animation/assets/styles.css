@@ -1,0 +1,81 @@
+body {
+  background-color: var(--lovelish);
+}
+
+:root {
+  --lovelish: hsl(0, 0%, 18%);
+  --handshake: hsl(40, 100%, 66%);
+}
+
+.main-box {
+  height: 100vh;
+  display: flex;
+  margin: auto;
+}
+
+.button-box {
+  height: 500px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+
+.button {
+  height: 100px;
+  width: 500px;
+  display: flex;
+  border-radius: 2.5rem;
+  transition: 0.5s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  background-image: linear-gradient(
+    to right,
+    #8081cf,
+    #847dc9,
+    #8778c3,
+    #8a74bd,
+    #8d70b7,
+    #8f6db2,
+    #9169ac,
+    #9266a7,
+    #9362a1,
+    #935e9a,
+    #935b93,
+    #93578d
+  );
+  color: white;
+  animation: blurr 2s;
+  animation-iteration-count: infinite;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.button img {
+  margin-left: auto;
+  transition: 0.5s;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+@keyframes blurr {
+  0%,
+  100% {
+    box-shadow: 0 0 10px var(--handshake);
+  }
+
+  50% {
+    box-shadow: 0 0 36px var(--handshake);
+  }
+}
+
+.button:hover {
+  letter-spacing: 20px;
+  height: 105px;
+}
+
+.button:hover img {
+  transform: translateX(-370px);
+}
