@@ -5,6 +5,8 @@ body {
 :root {
   --lovelish: hsl(0, 0%, 18%);
   --handshake: hsl(40, 100%, 66%);
+  --btn2: hsl(242, 43%, 65%);
+  --btn3: hsl(160, 86%, 63%);
 }
 
 .main-box {
@@ -19,9 +21,10 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  display: flex;
+  display: grid;
 }
 
+/* Button 1 */
 .button {
   height: 100px;
   width: 500px;
@@ -53,7 +56,7 @@ body {
   border: none;
 }
 
-.button img {
+img {
   margin-left: auto;
   transition: 0.5s;
   width: 5.5rem;
@@ -71,11 +74,171 @@ body {
   }
 }
 
-.button:hover {
-  letter-spacing: 20px;
-  height: 105px;
+@keyframes fade {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 1.6rem;
+  margin-left: 10rem;
+  transition: 0.5s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover .title {
+  transform: translateX(-140px);
+  animation: fade 0.5s;
+  opacity: 0%;
 }
 
 .button:hover img {
   transform: translateX(-370px);
+}
+
+.description {
+  position: absolute;
+  margin-top: 1.4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-style: italic;
+  transition: 0.5s;
+  opacity: 0%;
+  margin-left: 6rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover .description {
+  transform: translateX(70px);
+  opacity: 100%;
+}
+
+/* Button 2 */
+.button2 {
+  height: 100px;
+  width: 500px;
+  display: flex;
+  border-radius: 2.5rem;
+  transition: 0.5s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  background-image: linear-gradient(
+    to right top,
+    #00e9d8,
+    #1eebd2,
+    #31eecb,
+    #42f0c4,
+    #51f2bc,
+    #5ff3b5,
+    #6cf5af,
+    #79f6a8,
+    #88f7a0,
+    #96f899,
+    #a4f992,
+    #b2f98b
+  );
+  color: white;
+  animation: blurr2 2s;
+  animation-iteration-count: infinite;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.button2:hover .title {
+  transform: translateX(-140px);
+  animation: fade 0.5s;
+  opacity: 0%;
+}
+
+.button2:hover img {
+  transform: translateX(-370px);
+}
+
+.button2:hover .description {
+  transform: translateX(70px);
+  opacity: 100%;
+}
+
+@keyframes blurr2 {
+  0%,
+  100% {
+    box-shadow: 0 0 10px var(--btn2);
+  }
+
+  50% {
+    box-shadow: 0 0 36px var(--btn2);
+  }
+}
+
+/* Button 3 */
+.button3 {
+  height: 100px;
+  width: 500px;
+  display: flex;
+  border-radius: 2.5rem;
+  transition: 0.5s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  background-image: linear-gradient(
+    to right top,
+    #ffb4be,
+    #ffb5b6,
+    #ffb7ad,
+    #ffbaa5,
+    #ffbd9e,
+    #ffc098,
+    #ffc492,
+    #ffc88d,
+    #ffcd87,
+    #ffd281,
+    #ffd77b,
+    #ffdd76
+  );
+  animation: blurr3 2s;
+  animation-iteration-count: infinite;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.button3:hover .title {
+  transform: translateX(-140px);
+  animation: fade 0.5s;
+  opacity: 0%;
+}
+
+.button3:hover img {
+  transform: translateX(-370px);
+}
+
+.button3:hover .description {
+  transform: translateX(70px);
+  opacity: 100%;
+}
+
+@keyframes blurr3 {
+  0%,
+  100% {
+    box-shadow: 0 0 10px var(--btn3);
+  }
+
+  50% {
+    box-shadow: 0 0 36px var(--btn3);
+  }
+}
+
+.watermark {
+  text-align: center;
+  color: white;
+}
+
+.watermark a {
+  color: #8081cf;
 }
