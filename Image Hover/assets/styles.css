@@ -1,0 +1,44 @@
+body{
+    background-color: white;
+}
+
+.wrapper{
+    height: 100vh;
+  display: flex;
+  margin: auto;
+}
+
+.img-box{
+    height: 300px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+}
+
+.image1{
+    border-radius: 1rem;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.image2{
+    position: absolute;
+    border-radius: 1rem;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.img-box:hover .image1{
+  opacity: 0;
+}
+
+.img-box:hover .image2{
+   opacity: 100%;
+}
+
+.watermark{
+    position: absolute;
+    margin-top: 25rem;
+}
